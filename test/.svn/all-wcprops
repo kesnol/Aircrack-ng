@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/1675/trunk/test
+END
+Chinese-SSID-Name.pcap
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/1675/trunk/test/Chinese-SSID-Name.pcap
+END
+wep.open.system.authentication.cap
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/938/trunk/test/wep.open.system.authentication.cap
+END
+passphrases.db
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/1126/trunk/test/passphrases.db
+END
+password.lst
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/938/trunk/test/password.lst
+END
+replay.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/968/trunk/test/replay.py
+END
+wep.shared.key.authentication.cap
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/938/trunk/test/wep.shared.key.authentication.cap
+END
+wpa.cap
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/938/trunk/test/wpa.cap
+END
+wpa2.eapol.cap
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/938/trunk/test/wpa2.eapol.cap
+END

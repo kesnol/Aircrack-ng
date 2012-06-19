@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2129/branch/airoscript-ng/src/functions/attacks
+END
+wep
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2020/branch/airoscript-ng/src/functions/attacks/wep
+END
+auth
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1949/branch/airoscript-ng/src/functions/attacks/auth
+END
+injection
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2090/branch/airoscript-ng/src/functions/attacks/injection
+END
+others
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2129/branch/airoscript-ng/src/functions/attacks/others
+END
+wpa
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2090/branch/airoscript-ng/src/functions/attacks/wpa
+END

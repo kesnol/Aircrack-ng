@@ -1,0 +1,239 @@
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/!svn/ver/2128/trunk/src
+END
+pcap.h
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/2074/trunk/src/pcap.h
+END
+aircrack-ptw-lib.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/1511/trunk/src/aircrack-ptw-lib.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2128/trunk/src/Makefile
+END
+airdecloak-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2008/trunk/src/airdecloak-ng.c
+END
+aircrack-ptw-lib.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2073/trunk/src/aircrack-ptw-lib.h
+END
+airdecloak-ng.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/1567/trunk/src/airdecloak-ng.h
+END
+easside-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1682/trunk/src/easside-ng.c
+END
+crypto.c
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2074/trunk/src/crypto.c
+END
+easside.h
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/938/trunk/src/easside.h
+END
+ivstools.c
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2008/trunk/src/ivstools.c
+END
+crctable.h
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/938/trunk/src/crctable.h
+END
+crypto.h
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2074/trunk/src/crypto.h
+END
+sha1-sse2.S
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2006/trunk/src/sha1-sse2.S
+END
+common.c
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2006/trunk/src/common.c
+END
+version.h
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/2069/trunk/src/version.h
+END
+wpaclean.c
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/1918/trunk/src/wpaclean.c
+END
+packetforge-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/1682/trunk/src/packetforge-ng.c
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2074/trunk/src/common.h
+END
+wkp-frame.h
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/1782/trunk/src/wkp-frame.h
+END
+tkiptun-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2008/trunk/src/tkiptun-ng.c
+END
+makeivs-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1684/trunk/src/makeivs-ng.c
+END
+airtun-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2008/trunk/src/airtun-ng.c
+END
+uniqueiv.c
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/1007/trunk/src/uniqueiv.c
+END
+wesside-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1682/trunk/src/wesside-ng.c
+END
+airbase-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2008/trunk/src/airbase-ng.c
+END
+aireplay-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2008/trunk/src/aireplay-ng.c
+END
+kstats.c
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2008/trunk/src/kstats.c
+END
+buddy-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/1682/trunk/src/buddy-ng.c
+END
+airdecap-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/1683/trunk/src/airdecap-ng.c
+END
+uniqueiv.h
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2149/trunk/src/uniqueiv.h
+END
+sha1-sse2.h
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2070/trunk/src/sha1-sse2.h
+END
+besside-ng-crawler.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/1817/trunk/src/besside-ng-crawler.c
+END
+airserv-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1894/trunk/src/airserv-ng.c
+END
+besside-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1913/trunk/src/besside-ng.c
+END
+aircrack-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2024/trunk/src/aircrack-ng.c
+END
+airodump-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2011/trunk/src/airodump-ng.c
+END
+airolib-ng.c
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1768/trunk/src/airolib-ng.c
+END
+aircrack-ng.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2149/trunk/src/aircrack-ng.h
+END
+airodump-ng.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2072/trunk/src/airodump-ng.h
+END

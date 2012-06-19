@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus
+END
+DBus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/DBus.cs
+END
+Connection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/Connection.cs
+END
+Introspection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/Introspection.cs
+END
+UnixTransport.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/UnixTransport.cs
+END
+Protocol.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/Protocol.cs
+END
+Signature.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/Signature.cs
+END
+SocketTransport.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/SocketTransport.cs
+END
+MessageReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/MessageReader.cs
+END
+UnixNativeTransport.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/UnixNativeTransport.cs
+END
+ExportObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/ExportObject.cs
+END
+NDesk-dbus.pidb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/NDesk-dbus.pidb
+END
+Notifications.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/Notifications.cs
+END
+Authentication.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/Authentication.cs
+END
+BusObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/BusObject.cs
+END
+PendingCall.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/PendingCall.cs
+END
+Wrapper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/Wrapper.cs
+END
+MessageWriter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/MessageWriter.cs
+END
+TypeImplementer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/TypeImplementer.cs
+END
+Message.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/Message.cs
+END
+MatchRule.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/MatchRule.cs
+END
+Mapper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/Mapper.cs
+END
+DProxy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/DProxy.cs
+END
+Address.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/Address.cs
+END
+Bus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/Bus.cs
+END
+MessageFilter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/MessageFilter.cs
+END
+NDesk-dbus.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/NDesk-dbus.csproj
+END
+ndesk.snk
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/ndesk.snk
+END
+AssemblyInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/AssemblyInfo.cs
+END
+Transport.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1911/trunk/lib/csharp/MonoExample/NDesk-dbus/Transport.cs
+END

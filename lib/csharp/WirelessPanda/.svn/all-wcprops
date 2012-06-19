@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/1911/trunk/lib/csharp/WirelessPanda
+END
+Coordinates.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1910/trunk/lib/csharp/WirelessPanda/Coordinates.cs
+END
+AccessPoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1910/trunk/lib/csharp/WirelessPanda/AccessPoint.cs
+END
+WirelessPanda.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1910/trunk/lib/csharp/WirelessPanda/WirelessPanda.csproj
+END
+WirelessDevice.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1910/trunk/lib/csharp/WirelessPanda/WirelessDevice.cs
+END
+Station.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1910/trunk/lib/csharp/WirelessPanda/Station.cs
+END
+WirelessPanda.Mono.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1911/trunk/lib/csharp/WirelessPanda/WirelessPanda.Mono.csproj
+END

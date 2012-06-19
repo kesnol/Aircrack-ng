@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2112/trunk/scripts/airdrop-ng/doc
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2112/trunk/scripts/airdrop-ng/doc/Makefile
+END
+dropRules.conf.example
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2100/trunk/scripts/airdrop-ng/doc/dropRules.conf.example
+END
+Apple.sample.txt
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2099/trunk/scripts/airdrop-ng/doc/Apple.sample.txt
+END
+airdrop-ng.1
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2099/trunk/scripts/airdrop-ng/doc/airdrop-ng.1
+END

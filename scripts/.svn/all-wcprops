@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/2148/trunk/scripts
+END
+airodump-ng-oui-update
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1859/trunk/scripts/airodump-ng-oui-update
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2047/trunk/scripts/Makefile
+END
+wifi-detect.sh
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2126/trunk/scripts/wifi-detect.sh
+END
+airmon-zc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2147/trunk/scripts/airmon-zc
+END
+airmon-ng.freebsd
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1975/trunk/scripts/airmon-ng.freebsd
+END
+airmon-ng
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2148/trunk/scripts/airmon-ng
+END
+airdriver-ng
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/1651/trunk/scripts/airdriver-ng
+END

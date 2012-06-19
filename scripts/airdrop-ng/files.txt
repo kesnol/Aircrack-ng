@@ -1,0 +1,10 @@
+/usr/local/lib/python2.7/dist-packages/airdrop/lorcon.py
+/usr/local/lib/python2.7/dist-packages/airdrop/__init__.py
+/usr/local/lib/python2.7/dist-packages/airdrop/libDumpParse.py
+/usr/local/lib/python2.7/dist-packages/airdrop/libOuiParse.py
+/usr/local/lib/python2.7/dist-packages/airdrop/lorcon.pyc
+/usr/local/lib/python2.7/dist-packages/airdrop/__init__.pyc
+/usr/local/lib/python2.7/dist-packages/airdrop/libDumpParse.pyc
+/usr/local/lib/python2.7/dist-packages/airdrop/libOuiParse.pyc
+/usr/local/bin/airdrop-ng
+/usr/local/lib/python2.7/dist-packages/airdrop_ng-1.1-py2.7.egg-info

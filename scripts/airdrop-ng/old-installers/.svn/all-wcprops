@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2099/trunk/scripts/airdrop-ng/old-installers
+END
+install.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2099/trunk/scripts/airdrop-ng/old-installers/install.py
+END
+uninstall.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2099/trunk/scripts/airdrop-ng/old-installers/uninstall.py
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2133/branch/airoscript-ng
+END
+.mkinstalldirs
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1711/branch/airoscript-ng/.mkinstalldirs
+END
+airoscript-ng_gtk.desktop
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2050/branch/airoscript-ng/airoscript-ng_gtk.desktop
+END
+Readme.rst
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1997/branch/airoscript-ng/Readme.rst
+END
+airoscript-ng.desktop
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2058/branch/airoscript-ng/airoscript-ng.desktop
+END
+Makefile-Linux
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2122/branch/airoscript-ng/Makefile-Linux
+END
+Makefile-CYGWIN
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1883/branch/airoscript-ng/Makefile-CYGWIN
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2121/branch/airoscript-ng/Makefile
+END

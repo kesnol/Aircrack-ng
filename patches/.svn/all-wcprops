@@ -1,0 +1,275 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/1857/trunk/patches
+END
+ieee80211_inject.patch
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/938/trunk/patches/ieee80211_inject.patch
+END
+ath5k_regdomain_override.patch
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1654/trunk/patches/ath5k_regdomain_override.patch
+END
+mac80211_2.6.27_frag+ack.patch
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1302/trunk/patches/mac80211_2.6.27_frag+ack.patch
+END
+rtl8187_2.6.32.patch
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/1659/trunk/patches/rtl8187_2.6.32.patch
+END
+ieee80211_softmac_adjust_bitrate.patch
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/938/trunk/patches/ieee80211_softmac_adjust_bitrate.patch
+END
+acx-20070101.patch
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/938/trunk/patches/acx-20070101.patch
+END
+ath9k_regdomain_override.patch
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1654/trunk/patches/ath9k_regdomain_override.patch
+END
+mac80211_2.6.26_frag.patch
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/1118/trunk/patches/mac80211_2.6.26_frag.patch
+END
+ath5k-pass-failed-crc.patch
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1391/trunk/patches/ath5k-pass-failed-crc.patch
+END
+fix_ath5k_no_data_in_monitor_mode.patch
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1698/trunk/patches/fix_ath5k_no_data_in_monitor_mode.patch
+END
+rtl8180-0.21v2.patch
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/938/trunk/patches/rtl8180-0.21v2.patch
+END
+ipw2200-1.1.4-inject.patch
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/1857/trunk/patches/ipw2200-1.1.4-inject.patch
+END
+mac80211-2.6.29-fix-tx-ctl-no-ack-retry-count.patch
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1508/trunk/patches/mac80211-2.6.29-fix-tx-ctl-no-ack-retry-count.patch
+END
+ieee80211_inject-2.6.22.patch
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/938/trunk/patches/ieee80211_inject-2.6.22.patch
+END
+linux-wlanng-0.2.8.patch
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/938/trunk/patches/linux-wlanng-0.2.8.patch
+END
+rtl8187_hw_signal_backport_2.6.28.patch
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1402/trunk/patches/rtl8187_hw_signal_backport_2.6.28.patch
+END
+hostap-driver-0.4.7.patch
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/938/trunk/patches/hostap-driver-0.4.7.patch
+END
+linux-wlanng-kernel-2.6.28.patch
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1501/trunk/patches/linux-wlanng-kernel-2.6.28.patch
+END
+madwifi-ng-r4073.patch
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1585/trunk/patches/madwifi-ng-r4073.patch
+END
+mac80211_2.6.28-rc8-wl_frag+ack_radiotap.patch
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1286/trunk/patches/mac80211_2.6.28-rc8-wl_frag+ack_radiotap.patch
+END
+zd1211rw_inject_2.6.23.patch
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/938/trunk/patches/zd1211rw_inject_2.6.23.patch
+END
+channel-negative-one-maxim.patch
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1764/trunk/patches/channel-negative-one-maxim.patch
+END
+ath5k-frequency-chaos-2.6.28.patch
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1391/trunk/patches/ath5k-frequency-chaos-2.6.28.patch
+END
+b43-injection-2.6.24.4.patch
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1026/trunk/patches/b43-injection-2.6.24.4.patch
+END
+zd1211rw_inject_2.6.26.patch
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1117/trunk/patches/zd1211rw_inject_2.6.26.patch
+END
+rtl8187_2.6.27.patch
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/1139/trunk/patches/rtl8187_2.6.27.patch
+END
+mac80211_2.6.24.4_frag.patch
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1022/trunk/patches/mac80211_2.6.24.4_frag.patch
+END
+ath5k-radiotap-fragfix-2.6.28-rc8-wl.patch
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1286/trunk/patches/ath5k-radiotap-fragfix-2.6.28-rc8-wl.patch
+END
+hostap-kernel-2.6.18.patch
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/938/trunk/patches/hostap-kernel-2.6.18.patch
+END
+rt2570-k2wrlz-1.6.1_2.6.24.patch
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1093/trunk/patches/rt2570-k2wrlz-1.6.1_2.6.24.patch
+END
+ar9170_regdomain_override.patch
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1654/trunk/patches/ar9170_regdomain_override.patch
+END
+madwifi-old-r1417.patch
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/938/trunk/patches/madwifi-old-r1417.patch
+END
+prism54-svn-20050724.patch
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/938/trunk/patches/prism54-svn-20050724.patch
+END
+ath5k-injection-2.6.27-rc2.patch
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1131/trunk/patches/ath5k-injection-2.6.27-rc2.patch
+END
+b43-injection-2.6.26-rc8-wl.patch
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1096/trunk/patches/b43-injection-2.6.26-rc8-wl.patch
+END
+rt73_2.6.27.patch
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1140/trunk/patches/rt73_2.6.27.patch
+END
+zd1211rw-inject+dbi-fix-2.6.26.patch
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1844/trunk/patches/zd1211rw-inject+dbi-fix-2.6.26.patch
+END
+mac80211_2.6.28-rc4-wl_frag+ack_v2.patch
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1224/trunk/patches/mac80211_2.6.28-rc4-wl_frag+ack_v2.patch
+END
+mac80211_2.6.28-rc4-wl_frag+ack_v3.patch
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1620/trunk/patches/mac80211_2.6.28-rc4-wl_frag+ack_v3.patch
+END
+mac80211_2.6.26-rc8-wl_frag.patch
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1096/trunk/patches/mac80211_2.6.26-rc8-wl_frag.patch
+END
+b43-injection-2.6.26-wl.patch
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1115/trunk/patches/b43-injection-2.6.26-wl.patch
+END
+rtl8187-mac80211-injection-speed-2.6.28-rc6.patch
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1235/trunk/patches/rtl8187-mac80211-injection-speed-2.6.28-rc6.patch
+END
+mac80211_2.6.26-wl_frag.patch
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1113/trunk/patches/mac80211_2.6.26-wl_frag.patch
+END
+bcm43xx-injection-linux-2.6.20.patch
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/938/trunk/patches/bcm43xx-injection-linux-2.6.20.patch
+END
+rtl8187_2.6.35-monitor_only.patch
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1777/trunk/patches/rtl8187_2.6.35-monitor_only.patch
+END

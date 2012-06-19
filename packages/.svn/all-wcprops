@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/1692/trunk/packages
+END
+slack-desc
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/938/trunk/packages/slack-desc
+END
+aircrack-ng.spec
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1692/trunk/packages/aircrack-ng.spec
+END
+PKGBUILD
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/1692/trunk/packages/PKGBUILD
+END

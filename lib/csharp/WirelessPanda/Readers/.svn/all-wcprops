@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1910/trunk/lib/csharp/WirelessPanda/Readers
+END
+Reader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1910/trunk/lib/csharp/WirelessPanda/Readers/Reader.cs
+END
+NetXMLReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1910/trunk/lib/csharp/WirelessPanda/Readers/NetXMLReader.cs
+END
+UniversalReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1910/trunk/lib/csharp/WirelessPanda/Readers/UniversalReader.cs
+END
+kismetCsvReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1910/trunk/lib/csharp/WirelessPanda/Readers/kismetCsvReader.cs
+END
+csvReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1910/trunk/lib/csharp/WirelessPanda/Readers/csvReader.cs
+END
