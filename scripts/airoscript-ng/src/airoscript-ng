@@ -61,6 +61,7 @@ resolution
 check_cardctl; #debug
 setargs $@ # Plugins are also loaded here, so be carefull
 setinterface "start"
+check_default_software &
 clear=clear; cleanautovars
 [[ "$noscan" != 1 ]] && autoscan
 mainmenu

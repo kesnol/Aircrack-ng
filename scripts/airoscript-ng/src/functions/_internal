@@ -265,4 +265,9 @@ yesno(){
     read -p "${@} [Y|n]" -n1 -s a; echo
     [[ $a =~ (.*)[N|n](.*) ]] && return 1 || return 0
 }
+
+set_default_software(){
+    
+}
+
 _source $path/internal/startup
