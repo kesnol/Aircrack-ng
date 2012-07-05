@@ -113,7 +113,7 @@ wep_attacks_fakeauto(){
         FT="f"
     fi
 
-    capture & execute "Injection: Host: $Host_MAC" $AIREPLAY $iwifi --arpreplay -b $Host_MAC -d $INJMAC -$FT 1 -m 68 -n 86 -h $FAKE_MAC -x $INJECTRATE & choosefake 
+    capture & execute "Injection: Host: $Host_MAC" $AIREPLAY $iwifi --arpreplay -b $Host_MAC -d $INJMAC -$FT 1 -m 68 -n 86 -h $FAKE_MAC -x $INJECTRATE & choose_fake 
 }
 
 wep_attacks_fakeinteractive(){
@@ -126,7 +126,7 @@ wep_attacks_fakeinteractive(){
         INJMAC="FF:FF:FF:FF:FF:FF"
         FT="0841"
     fi
-    capture & execute  "Interactive Packet Sel on Host: $Host_SSID" $AIREPLAY $iwifi --interactive -p $FT -c $INJMAC -b $Host_MAC -h $FAKE_MAC -x $INJECTRATE & choosefake
+    capture & execute  "Interactive Packet Sel on Host: $Host_SSID" $AIREPLAY $iwifi --interactive -p $FT -c $INJMAC -b $Host_MAC -h $FAKE_MAC -x $INJECTRATE & choose_fake
 }
 
 
@@ -169,7 +169,7 @@ wep_attacks_fragmentation(){
         execute "Fragmentation w/o client" $AIREPLAY -5 -b $Host_MAC -h\
             $FAKE_MAC -k $FRAG_CLIENT_IP -l $FRAG_HOST_IP $iwifi &
 			capture &
-			choosefake &
+			choose_fake &
 			injectmenu frag
     else
         execute "Fragmentation attack" $AIREPLAY -7 -b $Host_MAC -h $Client_MAC\
