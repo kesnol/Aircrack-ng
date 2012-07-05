@@ -42,9 +42,9 @@ select_target(){
 }
 
 detectclients(){
-    check_function deauthall || source $path/attacks/auth
+    check_function auth_attacks_deauth || source $path/attacks/auth
     if [ "$AUTO" == "2" ]; then return; fi
-    $iwconfig $wificard channel $Host_CHAN; deauthall &
+    $iwconfig $wificard channel $Host_CHAN; auth_attacks_deauth 1 &
     export AUTO=0; export QUIET=""; export wait_for_execute=1; 
     warn "${mark}Press ctrl+C when you've collected as many clients as you want"
     capture; 
