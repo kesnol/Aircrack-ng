@@ -36,7 +36,7 @@ choose_deauth(){
 }
 
 auth_attacks_deauth(){
-	case $choice in
+	case $1 in
 		1) execute "Deauth All" $AIREPLAY\
 		   	--deauth $DEAUTHTIME -a $Host_MAC $wifi; break;;
 		2) required "$Client_MAC" "You have to select a client first"; 
