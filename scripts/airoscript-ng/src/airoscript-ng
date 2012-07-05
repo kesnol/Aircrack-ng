@@ -58,11 +58,12 @@ rootwarn # Check conffile permissions!
 setps # Set PS3 variable
 [[ $show_startup_goodie ]] && { airoscript_ascii_art 2>/dev/null ; } # Display some startup ascii art =)
 warn "${mark}Welcome to airoscript, have a nice day"
+check_default_software &
 resolution
 check_cardctl; #debug
 setargs $@ # Plugins are also loaded here, so be carefull
+launch_help_fifo &
 setinterface "start"
-check_default_software &
 cleanautovars
 [[ "$noscan" != 1 ]] && autoscan
 mainmenu
