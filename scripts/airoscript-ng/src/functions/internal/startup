@@ -70,12 +70,6 @@ checkforcemac() {
     fi
 }
 
-special_info(){
-    echo $@>/dev/null # TODO
-
-}
-
-
 guess_idata(){
     AIROUTPUT=$($AIRMON $1 $wificard|grep -v "running"|grep -A 1 $wificard);
     [[ $AIROUTPUT  =~ (.*)-(.*)phy(.*)monitor\ mode\ enabled\ on(.*)\) ]]; tmpwifi="${BASH_REMATCH[4]}";
@@ -118,10 +112,15 @@ wichchangemac(){
     done
 }
 
+is_number(){ return $(expr "$1 + 1" &> /dev/null); }
+
 # Wrapper to make interface creation easier.
 selectap_wrapper(){
+	while [ "1" ]; do
         mkmenueline $max r; echo " Rescan targets"; mkmenuline $max
         single_question "Select Target: "; choice="$ans"
+		is_number $choice && break
+	done
 }
 
 valid_mac(){ (( ${#1} >= 17 )) && return 0 || return 1; }
@@ -188,9 +187,10 @@ selectAp(){
 }
 
 launch_counter(){
+	o=$2; [[ $o == "" ]] && o="targets"
     for i in $( seq 1 $1 ); do
         a=$(( ($i * 100) / $1 ))
-        sleep 1; echo -ne "\r${mark}Scanning for targets: [$a/100 completed]";
+        sleep 1; echo -ne "\r${mark}Scanning for $o: [$a/100 completed]";
     done
 }
 
