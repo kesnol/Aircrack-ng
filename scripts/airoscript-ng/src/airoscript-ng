@@ -65,5 +65,7 @@ setargs $@ # Plugins are also loaded here, so be carefull
 launch_help_fifo &
 setinterface "start"
 cleanautovars
+echo -n "${mark}Checking if interface can inject..." 
+$AIREPLAY -9 $wifi &>/dev/null && echo "${red}success${end}" 
 [[ "$noscan" != 1 ]] && autoscan
 mainmenu
