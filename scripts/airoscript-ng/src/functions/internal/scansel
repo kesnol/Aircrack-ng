@@ -57,7 +57,7 @@ auto_scan_clients(){
 
 	execute "" $AIRODUMP --ignore-negative-one --bssid $Host_MAC -w $DUMP_PATH/Client_$Host_MAC -c $Host_CHAN -a $wifi 
 	sleep $time_to_scan && killall -2 "airodump-ng"; 
-    export SCAN=0; AUTO=0; QUIET=0; NOTITLE=0
+    export SCAN=0; AUTO=0; QUIET=""; NOTITLE=0
 }
 
 
@@ -69,9 +69,8 @@ select_client(){
 		(( $choice < $(( ${#HOST[@]} + 3 )) )) && break
 	done
 
-	(( $choice == $(( ${#HOST[@]} + 1 )) )) && { Client_MAC=""; directed=0;  return; }
-
-	(( $choice == $(( ${#HOST[@]} + 2 )) )) && { auto_scan_clients; select_client; return; }
     export Client_MAC=` echo ${HOST[$choice -1]} | awk '{split($1, info, "," );  print info[1]  }'`; 
-	$clear
+	(( $choice == $(( ${#HOST[@]} + 1 )) )) && { Client_MAC=""; directed=0; }
+	(( $choice == $(( ${#HOST[@]} + 2 )) )) && { auto_scan_clients; select_client; }
+
 }

