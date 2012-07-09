@@ -1,1 +1,1 @@
-src/Readme.rst
+doc/Readme.rst
