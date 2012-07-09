@@ -67,7 +67,6 @@ select_client(){
 	while [ "1" ]; do
 		mkmenu "Select client" ${HOST[@]} "None" "Rescan"
 		(( $choice < $(( ${#HOST[@]} + 3 )) )) && break
-	read -p "$choice ${#HOST[@]}"
 	done
 
 	(( $choice == $(( ${#HOST[@]} + 1 )) )) && { Client_MAC=""; directed=0;  return; }
