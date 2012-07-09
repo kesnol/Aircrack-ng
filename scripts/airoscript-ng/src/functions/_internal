@@ -192,7 +192,6 @@ execute(){
             fi
         else
             [[ $wait_for_execute == 1 ]] && {
-				echo "${mark} Executing $title, airoscript-ng will resume after it finishes or the window is closed"
                 $CDCMD $TERMINAL $HOLDA $TITLEFLAG "$title" $TOPLEFTBIG $BGC $BACKGROUND_COLOR $FGC $DUMPING_COLOR $EXECFLAG "${@} $eopts"
             } || {
                 $CDCMD $TERMINAL $HOLDA $TITLEFLAG "$title" $TOPLEFTBIG $BGC $BACKGROUND_COLOR $FGC $DUMPING_COLOR $EXECFLAG "${@} $eopts" &

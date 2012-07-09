@@ -22,21 +22,12 @@ check_function injectmenu || source $path/attacks/injection # It depends on inje
 check_client(){
 	[[ $dynamic_client_selection ]] && { auto_scan_clients; select_client; }
 	[[ $Client_MAC != ""  ]] && { 
-		ifconfig $wificard hw addr $Client_MAC
+		ifconfig $wificard hw ether $Client_MAC
 		directed=1; 
 		return 0; 
 	} || {
-		ifconfig $wificard hw addr $FAKE_MAC
+		ifconfig $wificard hw ether $FAKE_MAC
 	}
-}
-
-check_dump_xor(){
-    $DUMP_PATH/dump*xor && {
-        return 0;
-    } || {
-        $clear; error "You need to get a XOR packet. You can do it for example with a frag attack or a chopchop attack"; return 20
-    }
-
 }
 
 wep_attacks_menu(){
@@ -114,11 +105,13 @@ wep_attacks_fragmentation(){
     killall -9 airodump-ng aireplay-ng
     if [[ $directed != 1 ]]; then
 		auth_attacks_fake &
-        wait_for_execute=1 execute "Fragmentation w/o client" $AIREPLAY -5 -b $Host_MAC -h\
-            $FAKE_MAC -k $FRAG_CLIENT_IP -l $FRAG_HOST_IP $iwifi &
+        export wait_for_execute=1; execute "Fragmentation w/o client" $AIREPLAY -5 -b $Host_MAC -h\
+            $FAKE_MAC -k $FRAG_CLIENT_IP -l $FRAG_HOST_IP $iwifi 
+		wait_for_execute=0;
     else
-        wait_for_execute=1 execute "Fragmentation attack" $AIREPLAY -7 -b $Host_MAC -h $Client_MAC\
-            -k $FRAG_CLIENT_IP -l $FRAG_HOST_IP $iwifi  &  injectmenu frag
+        wait_for_execute=1; execute "Fragmentation attack" $AIREPLAY -7 -b $Host_MAC -h $Client_MAC\
+            -k $FRAG_CLIENT_IP -l $FRAG_HOST_IP $iwifi  
+		wait_for_execute=0;
     fi
 	AUTO=1 injectmenu frag
 }
@@ -128,12 +121,15 @@ wep_attacks_chopchop(){
 	hardclean replay_dec-*.xor
 
 	[[ $directed != 1 ]] && {
-		wait_for_execute=1 execute "Chopchoping at $Host_SSID"\
-			$AIREPLAY --chopchop -b $Host_MAC -h $FAKE_MAC $iwifi & 
-		auth_attacks_fake &
+		export wait_for_execute=1; execute "Chopchoping at $Host_SSID"\
+			$AIREPLAY --chopchop -b $Host_MAC -h $FAKE_MAC $iwifi  
+			auth_attacks_fake &
+		export wait_for_execute=0;
 	} || {
-		wait_for_execute=1 execute "Directed ChopChoping to $Client_MAC at $Host_SSID"\
-			$AIREPLAY  --chopchop -b $Host_MAC -h $Client_MAC $iwifi &
+		export wait_for_execute=1; 
+		execute "Directed ChopChoping to $Client_MAC at $Host_SSID"\
+			$AIREPLAY  --chopchop -b $Host_MAC -h $Client_MAC $iwifi 
+		export wait_for_execute=0;
 	}
 	AUTO=1 injectmenu chopchop
 }
