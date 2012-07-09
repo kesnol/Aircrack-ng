@@ -25,6 +25,15 @@ wpa_attacks(){
 }
 
 wpa_attacks_menu(){
+	help_fifo "${mark}${red}WPA attacks${end}\n"\
+		"You're seeing this menu because the network you selected has WPA encryption\n"\
+		"${red}Standard deauth attack${end}\n"\
+		"Deauths a client, then waits for the client to reconnect and tries to capture the 4-way handshake\n"\
+		"${red}QOS attack${end}\n"\
+		"Launches tkiptun-ng to try to crack some vulnerable accesspoints to the wmm stuff\n"\
+		"${red}WPA Migration Mode attack${end}\n"\
+		"This attack targets on Cisco Aironet routers, wich set both WPA and WEP encriptions on the same sssid\nIt listens for a wep-encapsulated arp packet and retransmits it (bitflipped to make it into an ARP coming from the attacker's MAC)"
+
     while true; do
         $clear; mkmenu "Select WPA Attack" "Standard attack" "Standard attack with QoS (WMM)" "WPA migration mode"
         case $choice in

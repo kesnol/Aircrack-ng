@@ -37,18 +37,18 @@ wep_attacks_menu(){
 		"${red}ARP Replay${end}\n" \
 		"Standard arp replay, tries to capture an arp and send it back to the router to generate traffic. If not client selected, it'll launch a fake auth attack to simulate one \n"\
 		"${red}Fragmentation ${end}\n"\
-		"Here follows some information about each attack\n"\
+		"Initiates a fragmentation attack to obtain 1500 bytes of PRGA. Then it generates a packet and injects it back to the router.\n"\ 
 		"${red}ChopChop  ${end}\n"\
-		"Here follows some information about each attack\n"\
+		"Tries to decode a single wep packet via chopchop attack, then it starts an injection attack with that packet.\n"\
 		"${red}Caffe Latte${end}\n"\
-		"Here follows some information about each attack\n"
+		"An attack not requering router to be in range, client-directed (useful if you're not close to the ap, but to a client)"
 
     while true; do $clear 
 	    mkmenu "Attacks using a client"\
             "ARP replay"\
             "Fragmentation attack"\
             "Chopchop attack"\
-            "Cafe latte"\
+            "Caffe latte"\
             "Return to main menu"
 
             case $choice in
